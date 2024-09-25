@@ -1,6 +1,6 @@
 function playSound(sound) {
     const audio = new Audio(`sounds/${sound}.mp3`);
-    audio.play();
+    audio.play().catch(error => console.error('Error playing sound:', error));
 }
 
 function stopSound() {
